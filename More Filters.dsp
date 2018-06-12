@@ -29,22 +29,21 @@ import("all.lib");
 
 //=================================================
 
+//REVISIT AT A LATER DATE
+
 //More advanced first order low pass filter - page 173
-fc = hslider("fc", 20, 20, 200000, 0.1); //logaritmic?	
+//fc = hslider("fc", 20, 20, 200000, 0.1) : smoo; //logaritmic?	
 
-phase = (2 * PI * fc) / SR;
-b1 = ( -1 * cos(phase) ) / ( 1 + sin(phase) );
-a0 = 0.5 * (1 + b1);
-a1 = a0; 
+//phase = (2 * PI * fc) / SR;
+//b1 = ( -1 * cos(phase) ) / ( 1 + sin(phase) );
+//a0 = 0.5 * (1 + b1);
+//a1 = a0; 
 
-
-//forward = _' : (_ * a1);
-//adv = ( _ * a0 ) <: forward + ~ ( _' : *( -1 * b1 ) );
-
+//OnePole = _ <: _ * a0 <: (_' * a0) + (_' : *( -1 * b1 ) ) :> _ :> _;
 
 //=================================================
 
-process = 0; //noise : adv; 
+process = noise : OnePole <: _,_ ;
 
 
 
