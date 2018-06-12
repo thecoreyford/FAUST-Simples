@@ -24,7 +24,7 @@ tp = pluckPos * SR * 0.001; //to sample rate -> to milliseconds
 feedForward = _ <: _ + (fdelay(65536, tp) *(-1)) :> _;
 resonator = +~( fdelay(65536, delayTime) : lowpass(2,fc) : *(absorbtion) );
 
-process = excitation : feedForward : resonator; 
+process = excitation : feedForward : resonator <: _,_; 
 
 
 
