@@ -1,5 +1,5 @@
 /*
-	Ring Modulation
+	Stereo Tremolo
 	Corey Ford 
 	27 April 2018
 

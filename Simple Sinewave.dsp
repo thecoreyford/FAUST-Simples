@@ -1,5 +1,5 @@
 /*
-	Four Fourty 
+	Simple Sinewave
 	Corey Ford 
 	4 June 2018
 
