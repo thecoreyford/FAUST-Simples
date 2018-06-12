@@ -37,16 +37,14 @@ b1 = ( -1 * cos(phase) ) / ( 1 + sin(phase) );
 a0 = 0.5 * (1 + b1);
 a1 = a0; 
 
-x = _;
 
-
-forward = _' : (_ * a1);
-adv = ( _ * a0 ) <: forward + ~ ( _' : *( -1 * b1 ) );
+//forward = _' : (_ * a1);
+//adv = ( _ * a0 ) <: forward + ~ ( _' : *( -1 * b1 ) );
 
 
 //=================================================
 
-process = noise : adv; 
+process = 0; //noise : adv; 
 
 
 
