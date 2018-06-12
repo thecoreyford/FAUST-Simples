@@ -6,11 +6,10 @@
 	Based off of ideas from: 
 	- 12. Introduction to Physical Modeling found at https://ccrma.stanford.edu/~rmichon/faustWorkshops/course2015/#ks
 
-	- "Audio processes: musical analysis, modification, synthesis, and control" by David Dreasey, Chapter 21.
+	- "Audio processes: musical analysis, modification, synthesis, and control" by David Creasey, Chapter 21.
 */
 
 import("all.lib");
-
 
 frequency = hslider("Frequency", 440, 80, 1200, 1.0);
 absorbtion = hslider("Absorbstion", 1.0, 0.0, 1.0, 0.001);
