@@ -16,6 +16,7 @@ import("all.lib");
 
 //=================================================
 
+//REVISIT AT A LATER DATE
 ////One Pole first order low pass filter
 //fc = hslider("fc", 20, 20, 200000, 0.1); //logaritmic?	
 
@@ -30,6 +31,7 @@ import("all.lib");
 //=================================================
 
 //REVISIT AT A LATER DATE
+//IS THIS SOMETHING THAT FAUST ISN'T PARTICULARLY GOOD AT? 
 
 //More advanced first order low pass filter - page 173
 //fc = hslider("fc", 20, 20, 200000, 0.1) : smoo; //logaritmic?	
