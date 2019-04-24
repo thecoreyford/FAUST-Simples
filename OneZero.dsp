@@ -1,19 +1,13 @@
-/*
-	One Zero
-	Corey Ford 
-	20 July 2018
 
-	"One Zero" Lowpass / Highpass Filter
-	@see Filters.dsp
+// WARNING: This a "legacy example based on a deprecated library". Check filters.lib
+// for more accurate examples of filter functions
 
-*/
+declare name "APF";
 
-import("all.lib");
+import("maxmsp.lib");
 
-filter = _ <: _,_'*b1 :> _
-with{
-	b1 = hslider("b1", 0, -1, 1, 0.01);
-};
+G = hslider("Gain [unit:dB]", 0, -10, 10, 0.1);
+F = hslider("Freq", 1000, 100, 10000, 1);
+Q = hslider("Q", 1, 0.01, 100, 0.01);
 
-process = _ : filter <: _,_; 
-
+process(x) = APF(x,F,G,Q);
